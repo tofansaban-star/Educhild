@@ -1,0 +1,228 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px 40px;
+}
+
+.app-header {
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 4px;
+  font-size: 32px;
+}
+
+.app-header p {
+  margin: 0;
+  color: var(--text);
+}
+
+.stage-switcher {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stage-switcher button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.stage-switcher button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.tier-switcher button {
+  font-size: 12px;
+  padding: 6px 12px;
+  opacity: 0.85;
+}
+
+.locale-switcher button {
+  font-size: 12px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.locale-flag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.stage-viewport {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+.phaser-container {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  touch-action: none; /* let Phaser own drag gestures instead of the page scrolling */
+}
+
+.phaser-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Episode narrative pilot: intro/end screens, dialogue overlay, continue prompt. */
+
+.narrative-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  background: #0b0f1a;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.narrative-screen h2 {
+  margin: 0;
+  color: #7cfc9c;
+  font-size: 20px;
+}
+
+.narrative-end-body {
+  color: #c9d6e3;
+  font-size: 14px;
+  white-space: pre-line;
+  max-width: 480px;
+}
+
+.narrative-tier-picker {
+  display: flex;
+  gap: 8px;
+}
+
+.narrative-tier-picker button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #2c3e50;
+  background: transparent;
+  color: #c9d6e3;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.narrative-tier-picker button.active {
+  background: #1f3a6e;
+  border-color: #8ab4f8;
+  color: #fff;
+}
+
+.start-button {
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  background: #2ecc71;
+  color: #0b0f1a;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dialogue-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(6, 10, 20, 0.55);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dialogue-box {
+  width: 100%;
+  max-width: 640px;
+  background: #111827;
+  border: 2px solid #2c3e50;
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+.dialogue-speaker {
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.dialogue-speaker.echo {
+  color: #7cfc9c;
+}
+
+.dialogue-speaker.shadow {
+  color: #ff4d6d;
+}
+
+.dialogue-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #e6edf3;
+  min-height: 48px;
+}
+
+.dialogue-hint {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #8b98a5;
+  text-align: right;
+}
+
+.continue-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 10, 20, 0.3);
+  border-radius: 8px;
+}
+
+.continue-button {
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  background: #2ecc71;
+  color: #0b0f1a;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dev-toggle {
+  margin-top: 4px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 11px;
+  cursor: pointer;
+  opacity: 0.7;
+}
