@@ -81,9 +81,9 @@ export class AccessKeyScene extends Phaser.Scene {
   private createKeypad(): void {
     const cols = 3;
     const startX = 310;
-    const startY = 420;
+    const startY = 395;
     const gapX = 90;
-    const gapY = 58;
+    const gapY = 54;
 
     KEYPAD_KEYS.forEach((key, index) => {
       const col = index % cols;
